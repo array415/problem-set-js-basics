@@ -10,3 +10,26 @@
 */
 
 // YOUR CODE HERE
+function isPrime(value) {
+   for(var i = 2; i < value; i++) {
+       if(value % i === 0) {
+           return false;
+       }
+
+   }
+   return true;
+ }
+
+
+function primes(max) {
+   var primesList = [];
+
+   for (var i = 0; i <= max; i++) {
+     if (isPrime(i)) {
+       primesList.push(i);
+     }
+   }
+
+ return primesList;
+
+}

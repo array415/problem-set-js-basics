@@ -21,3 +21,26 @@
 */
 
 // YOUR CODE HERE
+var shiftedLetter;
+var poppedLetter;
+var wordArray;                           // only got to racecar :(
+
+function shiftAndPop() {
+  shiftedLetter = wordArray.shift();     // ran out of time but had idea to split this into 2 functions and
+  poppedLetter = wordArray.pop();        // write if statements to check for " " & punction but i tried and couldn't make it work.
+}                                        // also have to use either toUpperCase() or toLowerCase() because p and P were returning false.
+                                        
+function isPalindrome(word) {
+  wordArray = word.split("");
+  shiftAndPop();
+
+  while(shiftedLetter === poppedLetter){
+    shiftAndPop();
+
+  if(wordArray <= 1) {
+    return true;
+  }
+
+  }
+    return false;
+}
